@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <%= render "shared/flashes" %>
+    <%= render "shared/navbar" %>
+
+    <h1>Hi, <%= user_signed_in? ? current_user.email : "you did'nt log in" %>!</h1>
     <%= yield %>
   </body>
 </html>
